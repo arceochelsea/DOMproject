@@ -1,9 +1,7 @@
-const banner = document.querySelector('#page-banner');
+const bookList = document.querySelector('#book-list');
 
-console.log('#page-banner node type is:', banner.nodeType); //will tell us what the node type (node type - return values) in this case an element
-console.log('#page-banner node name is:', banner.nodeName); //will tell us element name! it is a DIV (type of element)
-console.log('#page-banner has child nodes:', banner.hasChildNodes()); //returns true or false! does it have child nodes?
+console.log('the parents node is:', bookList.parentNode); //grabbing the reference of the parent node of bookList
+//console.log('the parents element is:', bookList.parentElement); //this will show the same thing
+console.log('the parents element is:', bookList.parentElement.parentElement); //finds the parents element of the bookList then finds the parent element of that! 
 
-
-const clonedBanner = banner.cloneNode(true); //we want it to go deeply into node. will just give node otherwise but not the nested content! thats why we must put true!
-console.log(clonedBanner);
+console.log(bookList.children);
