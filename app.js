@@ -1,7 +1,13 @@
+//how to traverse from one sibling to sibling (elements on the same level)
+
 const bookList = document.querySelector('#book-list');
+console.log('book-list next sibling is:', bookList.nextSibling);
+console.log('book-list next element sibling is:', bookList.nextElementSibling);
 
-console.log('the parents node is:', bookList.parentNode); //grabbing the reference of the parent node of bookList
-//console.log('the parents element is:', bookList.parentElement); //this will show the same thing
-console.log('the parents element is:', bookList.parentElement.parentElement); //finds the parents element of the bookList then finds the parent element of that! 
+console.log('book-list previous sibling is:', bookList.previousSibling);
+console.log('book-list previous element sibling is:', bookList.previousElementSibling);
 
-console.log(bookList.children);
+bookList.previousElementSibling.querySelector('p').innerHTML += '<br/>Too cool for everyone else!';
+
+
+
