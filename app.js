@@ -26,6 +26,10 @@ addForm.addEventListener('submit', function(e){
     deleteBtn.textContent = 'delete';
     bookName.textContent = value;
 
+    //add classes
+    bookName.classList.add('name');
+    deleteBtn.classList.add('delete');
+
     //append to DOM
     li.appendChild(bookName); //this is how to we add to DOM, appending adds to the end
     li.appendChild(deleteBtn); //order matters, if switched delete button will go first and thats not what we want!
