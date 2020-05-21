@@ -1,3 +1,4 @@
+//interacting with forms
 const list = document.querySelector('#book-list ul');
 
 //delete books
@@ -6,4 +7,15 @@ list.addEventListener('click',function(e){
         const li = e.target.parentElement;
         list.removeChild(li);
     }
-})
+});
+
+//add book-list
+
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const value = addForm.querySelector('input[type="text"]').value;
+    console.log(value);
+
+});
