@@ -16,6 +16,20 @@ const addForm = document.forms['add-book'];
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
     const value = addForm.querySelector('input[type="text"]').value;
-    console.log(value);
+
+    //create elements
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const deleteBtn = document.createElement('span');
+
+    //add content
+    deleteBtn.textContent = 'delete';
+    bookName.textContent = value;
+
+    //append to DOM
+    li.appendChild(bookName); //this is how to we add to DOM, appending adds to the end
+    li.appendChild(deleteBtn); //order matters, if switched delete button will go first and thats not what we want!
+    list.appendChild(li);
+
 
 });
