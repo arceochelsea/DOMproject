@@ -38,14 +38,11 @@ addForm.addEventListener('submit', function(e){
 
 });
 
-//Tutorial 14
-
-//Attributes 
-
-//in this tutorial netninja reviewed different ways to manipulate attributes on the DOM 
-//book.getAttribute('element') will get
-//book.setAttribute('element', 'whateverYouWantToChangeItTo') will change
-//book.hasAttribute('element') checking to see if it has; it will return true or false
-//book.removeAttribute('element') will remove
-
-//no changes to js file during this time
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+    if(hideBox.checked){
+        list.style.display = 'none';
+    } else {
+        list.style.display = 'initial';
+    }
+});
