@@ -1,5 +1,5 @@
 body{
-    font-family: Tahoma;
+    font-family: Calibri;
     color: #444;
     letter-spacing: 1px;
 }
@@ -21,7 +21,7 @@ h1, h2{
 }
 
 #page-banner{
-    background: #eee ;
+    background: #61a1bf ;
     padding: 10px 0;
 
 }
@@ -44,28 +44,28 @@ h1, h2{
     color: #444;
 }
 
-#book-list, #add-book, #tabbed-content{
+#show-list, #add-show, #tabbed-content{
     margin: 30px;
 }
 
-#book-list ul, #tabbed-content ul{
+#show-list ul, #tabbed-content ul{
     list-style-type: none;
     padding: 0;
 }
 
-#book-list li{
+#show-list li{
     padding: 20px;
     border-left: 5px solid #ddd;
     margin: 20px 10px;
 }
 
-#book-list li:hover{
-    border-color: #9361bf;
+#show-list li:hover{
+    border-color: #61a1bf;
 }
 
 .delete{
     float: right;
-    background: #9361bf;
+    background: #61a1bf;
     padding: 6px;
     border-radius: 4px;
     cursor: pointer;
@@ -76,12 +76,12 @@ h1, h2{
     background: #333;
 }
 
-#add-book{
+#add-show{
     width: 400px;
     margin: 0 auto;
 }
 
-#add-book input{
+#add-show input{
     display: block;
     margin: 20px 0;
     padding: 10px;
@@ -93,9 +93,9 @@ h1, h2{
     float: left;
 }
 
-#add-book button{
-    border: 1px solid #9361bf;
-    background: #9361bf;
+#add-show button{
+    border: 1px solid #61a1bf;
+    background: #61a1bf;
     padding: 10px 20px;
     font-size: 16px;
     display: inline-block;
@@ -109,17 +109,17 @@ h1, h2{
     color: white;
 }
 
-#add-book:after{
+#add-show:after{
     content: '';
     display: block;
     clear: both;
 }
 
-#add-book #hide{
+#add-show #hide{
     width: 30px;
 }
 
-#add-book label{
+#add-show label{
     line-height: 52px;
 }
 

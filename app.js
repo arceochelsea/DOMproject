@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function (){
 
 //interacting with forms
-const list = document.querySelector('#book-list ul');
+const list = document.querySelector('#show-list ul');
 
-//delete books
+//delete shows
 list.addEventListener('click',function(e){
     if(e.target.className == 'delete'){
         const li = e.target.parentElement;
@@ -11,9 +11,9 @@ list.addEventListener('click',function(e){
     }
 });
 
-//add book-list
+//add show-list
 
-const addForm = document.forms['add-book'];
+const addForm = document.forms['add-show'];
 
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -21,26 +21,26 @@ addForm.addEventListener('submit', function(e){
 
     //create elements
     const li = document.createElement('li');
-    const bookName = document.createElement('span');
+    const showName = document.createElement('span');
     const deleteBtn = document.createElement('span');
 
     //add content
     deleteBtn.textContent = 'delete';
-    bookName.textContent = value;
+    showName.textContent = value;
 
     //add classes
-    bookName.classList.add('name');
+    showName.classList.add('name');
     deleteBtn.classList.add('delete');
 
     //append to DOM
-    li.appendChild(bookName); //this is how to we add to DOM, appending adds to the end
+    li.appendChild(showName); //this is how to we add to DOM, appending adds to the end
     li.appendChild(deleteBtn); //order matters, if switched delete button will go first and thats not what we want!
     list.appendChild(li);
 
 
 });
 
-//hide books
+//hide shows
 
 const hideBox = document.querySelector('#hide');
 hideBox.addEventListener('change', function(e){
@@ -51,18 +51,18 @@ hideBox.addEventListener('change', function(e){
     }
 });
 
-//filter books
+//filter shows
 
-const searchBar = document.forms['search-books'].querySelector('input');
+const searchBar = document.forms['search-shows'].querySelector('input');
 searchBar.addEventListener('keyup', function(e){
     const term = e.target.value.toLowerCase();
-    const books = list.getElementsByTagName('li');
-    Array.from(books).forEach(function(book){
-        const title = book.firstElementChild.textContent;
+    const shows = list.getElementsByTagName('li');
+    Array.from(shows).forEach(function(show){
+        const title = show.firstElementChild.textContent;
         if(title.toLowerCase().indexOf(term) != -1){
-            book.style.display = 'block';
+            show.style.display = 'block';
         } else {
-            book.style.display = 'none';
+            show.style.display = 'none';
         }
     })
 });
